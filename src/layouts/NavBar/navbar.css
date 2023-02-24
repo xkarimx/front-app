@@ -1,0 +1,7 @@
+.header-box {
+    width: 95%;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
