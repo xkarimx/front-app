@@ -43,7 +43,6 @@
 #bnh {
     width: 205px;
     height: 23px;
-    font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -57,7 +56,6 @@
   #manga {
     width: 37px;
     height: 11px;
-    font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -75,7 +73,6 @@
     width: 356px;
     height: 60px;
   
-    font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;

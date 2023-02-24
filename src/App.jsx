@@ -11,8 +11,7 @@ function App() {
         <NavBar />
         <HeaderInfo />
         </section>
-        <InfoMain />
-      
+        <InfoMain />     
     </div>
   );
 }
