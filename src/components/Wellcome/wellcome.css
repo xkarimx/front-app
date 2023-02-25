@@ -27,7 +27,15 @@
 
 @media (max-width: 750px){
     .welcome-section p {
-      width: 80%;
+      width: 100%;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    .welcome-section {
+        width: 100%;
+    }
+    .welcome-section h2 {
+        width: 100%;
     }
   
   }
