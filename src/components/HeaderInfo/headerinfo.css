@@ -68,8 +68,13 @@
       font-size: 35px;
     }
     .div-text h3  {
-      width: 90%;
+      width: 100%;
+      font-size: medium;
       text-align: center;
+    }
+    .buttom1 {
+      width: 10rem;
+      height: 3rem;
     }
 
   }
