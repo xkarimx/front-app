@@ -1,4 +1,6 @@
 import React from 'react'
+import './formregister.css'
+import Form from '../Form/Form'
 
 export default function FormRegister() {
   return (
