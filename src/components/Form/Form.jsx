@@ -2,15 +2,15 @@ import React, { useRef } from "react";
 import "./form.css";
 import Wellcome from "../Wellcome/Wellcome";
 import Image from "../Image/Image";
-import axios  from 'axios';
+import axios from "axios";
 
 
 export default function Form() {
-  let nameRef = useRef();
-  let emailRef =  useRef();
-  let passwordRef = useRef();    
-  let confirmPasswordRef = useRef();
-
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const confirmPasswordRef = useRef();
+  
   const form = document.getElementById('formulario')
 
   
@@ -29,11 +29,11 @@ export default function Form() {
     if(passwordRef.current.value === confirmPasswordRef.current.value){
     try {
         await axios.post(
-            url,    
-            data    
+            url,    /* URL del endpoint para crear una categoria */
+            data    /* objeto necesario para crear una categoria (tal cual lo armo en postman) */
         )
-        form.reset()
         alert("Successful registration")
+        form.reset()
     } catch(error) {
         console.log(error)
         console.log('ocurrio un error')
@@ -42,44 +42,57 @@ export default function Form() {
   alert("Passwords do not match")
 }
 
-  }
+}
+
   return (
     <div className="register-fondo">
       <div className="register">
         <Wellcome />
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="form" id="formulario" onSubmit={handleSubmit}>
           <fieldset>
             <legend>Name</legend>
-            <input ref={nameRef} type="text" name="name" id="name" required />
+            <input type="text" name="name" id="name" ref={nameRef} required />
             <Image src="./form-img/profile.svg" />
           </fieldset>
           <fieldset>
             <legend>Email</legend>
-            <input ref={emailRef} type="email" name="email" id="email" required />
+            <input type="email" name="mail" id="mail" ref={emailRef}  required />
             <Image src="./form-img/@.svg" />
           </fieldset>
           <fieldset>
             <legend>Password</legend>
-            <input ref={passwordRef} type="password" name="password" id="password" required/>
+            <input type="password" name="password" id="password" ref={passwordRef}  required />
             <Image src="./form-img/lock1.svg" />
           </fieldset>
           <fieldset>
             <legend>Confirm Password</legend>
-            <input ref={confirmPasswordRef} type="password" name="confirm-password" id="confirm-password" required/>
+            <input
+              type="password"
+              name="confirm_password"
+              id="confirm_password"
+              ref={confirmPasswordRef}
+              required 
+            />
             <Image src="./form-img/lock1.svg" />
           </fieldset>
           <fieldset className="notification-check">
-            <input type="checkbox" name="email-notification" id="email-notification"/>
-            <label htmlFor="email-notification">
-              Send notification to my email
-            </label>
+            <input
+              type="checkbox"
+              name="email-notification"
+              id="email-notification"
+              
+            />
+            <label htmlFor="email-notification">Send notification to my email</label>
           </fieldset>
           <div>
-            {" "}
-            <input type="submit" value="Sing Up" className="sign-up"/>
+            <button type="submit" className="sign-up">
+              Sign up
+            </button>
           </div>
-          <button className="sign-in-google"><Image src="./form-img/Google.svg" />
-            <span>Sign in with Google</span></button>
+          <a href="#" className="sign-in-google">
+            <Image src="./form-img/Google.svg" />
+            <span>Sign in with Google</span>
+          </a>
           <p>
             Already have an account?{" "}
             <a href="#" className="link">
@@ -97,7 +110,6 @@ export default function Form() {
     </div>
   );
 }
-
 
 
 
