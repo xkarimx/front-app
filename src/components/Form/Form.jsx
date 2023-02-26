@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "./form.css";
-import Wellcome from "../Wellcome/Wellcome";
-import Image from "../Image/Image";
+import Wellcome from "../Wellcome/Wellcome.js";
+import Image from "../Image/Image.js";
 import axios from "axios";
 
 
@@ -32,8 +32,8 @@ export default function Form() {
             url,    /* URL del endpoint para crear una categoria */
             data    /* objeto necesario para crear una categoria (tal cual lo armo en postman) */
         )
-        alert("Successful registration")
         form.reset()
+        alert("Successful registration")
     } catch(error) {
         console.log(error)
         console.log('ocurrio un error')
