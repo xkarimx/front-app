@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "./form.css";
-import Wellcome from "../Wellcome/Wellcome.js";
-import Image from "../Image/Image.js";
+import Wellcome from "../Wellcome/Wellcome";
+import Image from "../Image/Image";
 import axios from "axios";
 
 
@@ -25,6 +25,7 @@ export default function Form() {
         
     }
     
+    
     let url = 'http://localhost:8080/users'
     if(passwordRef.current.value === confirmPasswordRef.current.value){
     try {
@@ -32,8 +33,9 @@ export default function Form() {
             url,    /* URL del endpoint para crear una categoria */
             data    /* objeto necesario para crear una categoria (tal cual lo armo en postman) */
         )
-        form.reset()
+        
         alert("Successful registration")
+    
     } catch(error) {
         console.log(error)
         console.log('ocurrio un error')
@@ -105,12 +107,9 @@ export default function Form() {
               home page
             </a>
           </p>
+        
         </form>
       </div>
     </div>
   );
 }
-
-
-
-
