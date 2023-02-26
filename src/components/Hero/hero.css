@@ -1,0 +1,17 @@
+.header {
+    background-image: url('../../../public/image/branden-skeli-kQ0_flbwBI4-unsplash 1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 17%;
+    width: 100%;
+    min-height: 60vh;
+    padding-top: 2rem;
+    object-fit: cover;
+}
+
+@media (max-width: 750px){
+    .header {
+      background-image: url(../../../public/image/fondomedia.png);
+      min-height: 100vh;
+    }
+}

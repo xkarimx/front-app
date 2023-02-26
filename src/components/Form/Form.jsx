@@ -35,7 +35,7 @@ export default function Form() {
         )
         
         alert("Successful registration")
-    
+        form.reset()
     } catch(error) {
         console.log(error)
         console.log('ocurrio un error')
