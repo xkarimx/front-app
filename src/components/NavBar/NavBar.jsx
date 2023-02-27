@@ -14,7 +14,7 @@ return (
     <div className={`nav_items ${isOpen && "open"}`}>
       <div className='porfile'>
       
-        <img src="./img/porfile.png" alt="" />
+        <img className='img-navbar' src="./image/Rectangle 10.png" alt="" />
 
         <div className='porfile-text'>
         <p>Lucas Ezequiel Silva</p>
@@ -23,8 +23,7 @@ return (
   
       </div>
 
-      <a href="#"><span>Read</span></a>
-      
+      <div className='divAncor'><a  id="ancor"href="#">Read</a></div>      
         <a href="#">Register</a>
         <a href="#">Login</a>
         <a href="#">Logout</a>
