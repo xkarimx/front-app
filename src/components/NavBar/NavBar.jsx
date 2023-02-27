@@ -1,15 +1,48 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './navbar.css'
 
-export default function NavBar() {
-  return (
-    <nav className="header-box">
-        <div>
-          <img className='img-logo' src="./image/menu.png" alt="" />
+
+const Navbar = ()=>{
+
+  const [isOpen, setIsOpen] = useState(false)
+
+return (
+ 
+  <nav>
+   <div className='navbar'>
+    
+    <div className={`nav_items ${isOpen && "open"}`}>
+      <div className='porfile'>
+      
+        <img src="./img/porfile.png" alt="" />
+
+        <div className='porfile-text'>
+        <p>Lucas Ezequiel Silva</p>
+        <p>lucasezequielsilva@gmail.com</p>
         </div>
-        <div>
-          <img className='img-logo' src="./image/Logo(1) 3.png" alt="logo" />
-        </div>
-    </nav>
-  )
+  
+      </div>
+
+      <a href="#"><span>Read</span></a>
+      
+        <a href="#">Register</a>
+        <a href="#">Login</a>
+        <a href="#">Logout</a>
+    </div>
+    <div className={`nav_toggle  ${isOpen && "open"}`} onClick={()=> setIsOpen(!isOpen)}>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+   
+  </div>
+  <div className='logo'>
+      <img src="./image/Logo(1) 3.png" alt="logo" />
+    </div>
+  
+ </nav>
+)
+
 }
+
+export default Navbar
